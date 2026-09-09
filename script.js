@@ -1,6 +1,5 @@
 /* =========================================================
    MOBEX — EXECUTIVE MOBILITY
-   INTERACTIONS
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,33 +11,47 @@ document.addEventListener("DOMContentLoaded", () => {
        ELEMENTOS
     ===================================================== */
 
-    const preloader = document.getElementById("preloader");
-    const header = document.getElementById("header");
+    const preloader =
+        document.getElementById("preloader");
 
-    const menuToggle = document.getElementById("menuToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
+    const header =
+        document.getElementById("header");
 
-    const hero = document.querySelector(".hero");
-    const heroGrid = document.querySelector(".hero-grid");
-    const heroCar = document.querySelector(".hero-car");
+    const menuToggle =
+        document.getElementById("menuToggle");
 
-    const revealElements = document.querySelectorAll(".reveal");
+    const mobileMenu =
+        document.getElementById("mobileMenu");
 
-    const navLinks = document.querySelectorAll(
-        ".nav-link"
-    );
+    const hero =
+        document.querySelector(".hero");
 
-    const mobileLinks = document.querySelectorAll(
-        ".mobile-menu a"
-    );
+    const heroGrid =
+        document.querySelector(".hero-grid");
 
-    const chartColumns = document.querySelectorAll(
-        ".chart-column"
-    );
+    const heroCar =
+        document.querySelector(".hero-car");
 
-    const yearElement = document.getElementById(
-        "currentYear"
-    );
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    const navLinks =
+        document.querySelectorAll(".nav-link");
+
+    const mobileLinks =
+        document.querySelectorAll(
+            ".mobile-menu a"
+        );
+
+    const chartColumns =
+        document.querySelectorAll(
+            ".chart-column"
+        );
+
+    const currentYear =
+        document.getElementById(
+            "currentYear"
+        );
 
 
     /* =====================================================
@@ -49,7 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
 
-            preloader?.classList.add("hide");
+            preloader?.classList.add(
+                "hide"
+            );
 
         }, 900);
 
@@ -60,24 +75,36 @@ document.addEventListener("DOMContentLoaded", () => {
        HEADER SCROLL
     ===================================================== */
 
-    const handleHeader = () => {
+    function updateHeader() {
 
-        if (!header) return;
-
-        if (window.scrollY > 30) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
+        if (!header) {
+            return;
         }
 
-    };
+        if (window.scrollY > 30) {
 
-    handleHeader();
+            header.classList.add(
+                "scrolled"
+            );
+
+        } else {
+
+            header.classList.remove(
+                "scrolled"
+            );
+
+        }
+
+    }
+
+    updateHeader();
 
     window.addEventListener(
         "scroll",
-        handleHeader,
-        { passive: true }
+        updateHeader,
+        {
+            passive: true
+        }
     );
 
 
@@ -85,188 +112,238 @@ document.addEventListener("DOMContentLoaded", () => {
        MOBILE MENU
     ===================================================== */
 
-    if (menuToggle && mobileMenu) {
+    if (
+        menuToggle &&
+        mobileMenu
+    ) {
 
-        menuToggle.addEventListener("click", () => {
+        menuToggle.addEventListener(
+            "click",
+            () => {
 
-            const isOpen =
-                mobileMenu.classList.toggle("active");
+                const isOpen =
+                    mobileMenu.classList.toggle(
+                        "active"
+                    );
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                String(isOpen)
-            );
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
 
-            document.body.classList.toggle(
-                "no-scroll",
-                isOpen
-            );
+                document.body.classList.toggle(
+                    "no-scroll",
+                    isOpen
+                );
 
-            const bars =
-                menuToggle.querySelectorAll("span");
 
-            if (isOpen) {
+                const bars =
+                    menuToggle.querySelectorAll(
+                        "span"
+                    );
 
-                bars[0].style.transform =
-                    "translateY(6px) rotate(45deg)";
 
-                bars[1].style.opacity =
-                    "0";
+                if (isOpen) {
 
-                bars[2].style.transform =
-                    "translateY(-6px) rotate(-45deg)";
+                    bars[0].style.transform =
+                        "translateY(6px) rotate(45deg)";
 
-            } else {
+                    bars[1].style.opacity =
+                        "0";
 
-                bars.forEach((bar) => {
+                    bars[2].style.transform =
+                        "translateY(-6px) rotate(-45deg)";
 
-                    bar.style.transform =
-                        "";
+                } else {
 
-                    bar.style.opacity =
-                        "";
+                    bars.forEach(
+                        bar => {
 
-                });
+                            bar.style.transform =
+                                "";
+
+                            bar.style.opacity =
+                                "";
+
+                        }
+                    );
+
+                }
 
             }
-
-        });
+        );
 
     }
 
 
     /* =====================================================
-       FECHAR MENU AO CLICAR
+       FECHAR MENU
     ===================================================== */
 
-    mobileLinks.forEach((link) => {
+    mobileLinks.forEach(
+        link => {
 
-        link.addEventListener("click", () => {
+            link.addEventListener(
+                "click",
+                () => {
 
-            mobileMenu?.classList.remove(
-                "active"
+                    mobileMenu?.classList.remove(
+                        "active"
+                    );
+
+                    menuToggle?.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    document.body.classList.remove(
+                        "no-scroll"
+                    );
+
+
+                    const bars =
+                        menuToggle?.querySelectorAll(
+                            "span"
+                        );
+
+
+                    bars?.forEach(
+                        bar => {
+
+                            bar.style.transform =
+                                "";
+
+                            bar.style.opacity =
+                                "";
+
+                        }
+                    );
+
+                }
             );
 
-            menuToggle?.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            document.body.classList.remove(
-                "no-scroll"
-            );
-
-            const bars =
-                menuToggle?.querySelectorAll(
-                    "span"
-                );
-
-            bars?.forEach((bar) => {
-
-                bar.style.transform = "";
-                bar.style.opacity = "";
-
-            });
-
-        });
-
-    });
+        }
+    );
 
 
     /* =====================================================
-       REVEAL ON SCROLL
+       REVEAL
     ===================================================== */
 
     const revealObserver =
         new IntersectionObserver(
-            (entries, observer) => {
+            (
+                entries,
+                observer
+            ) => {
 
-                entries.forEach((entry) => {
+                entries.forEach(
+                    entry => {
 
-                    if (!entry.isIntersecting) {
-                        return;
+                        if (
+                            !entry.isIntersecting
+                        ) {
+                            return;
+                        }
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
                     }
-
-                    entry.target.classList.add(
-                        "visible"
-                    );
-
-                    observer.unobserve(
-                        entry.target
-                    );
-
-                });
+                );
 
             },
             {
-                threshold: 0.14,
-                rootMargin: "0px 0px -35px 0px"
+                threshold: .14,
+
+                rootMargin:
+                    "0px 0px -35px 0px"
             }
         );
 
 
-    revealElements.forEach((element) => {
+    revealElements.forEach(
+        element => {
 
-        revealObserver.observe(
-            element
-        );
+            revealObserver.observe(
+                element
+            );
 
-    });
+        }
+    );
 
 
     /* =====================================================
-       ACTIVE NAVIGATION
+       SEÇÕES
     ===================================================== */
 
-    const sections = [
-        ...document.querySelectorAll(
-            "section[id]"
-        )
-    ];
+    const sections =
+        [
+            ...document.querySelectorAll(
+                "section[id]"
+            )
+        ];
 
-    const updateActiveNav = () => {
 
-        const scrollPosition =
+    function updateActiveNavigation() {
+
+        const position =
             window.scrollY + 180;
 
-        let currentId = "";
+        let current =
+            "inicio";
 
-        sections.forEach((section) => {
 
-            if (
-                scrollPosition >=
-                section.offsetTop
-            ) {
+        sections.forEach(
+            section => {
 
-                currentId =
-                    section.getAttribute(
-                        "id"
-                    );
+                if (
+                    position >=
+                    section.offsetTop
+                ) {
+
+                    current =
+                        section.id;
+
+                }
 
             }
+        );
 
-        });
 
-        navLinks.forEach((link) => {
+        navLinks.forEach(
+            link => {
 
-            const target =
-                link.getAttribute("href");
+                const href =
+                    link.getAttribute(
+                        "href"
+                    );
 
-            link.classList.toggle(
-                "active",
-                target === `#${currentId}`
-            );
+                link.classList.toggle(
+                    "active",
+                    href === `#${current}`
+                );
 
-        });
+            }
+        );
 
-    };
+    }
 
-    updateActiveNav();
+
+    updateActiveNavigation();
+
 
     window.addEventListener(
         "scroll",
-        updateActiveNav,
-        { passive: true }
+        updateActiveNavigation,
+        {
+            passive: true
+        }
     );
 
 
@@ -275,58 +352,71 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     document
-        .querySelectorAll('a[href^="#"]')
-        .forEach((link) => {
+        .querySelectorAll(
+            'a[href^="#"]'
+        )
+        .forEach(
+            link => {
 
-            link.addEventListener(
-                "click",
-                (event) => {
+                link.addEventListener(
+                    "click",
+                    event => {
 
-                    const targetId =
-                        link.getAttribute(
-                            "href"
+                        const targetId =
+                            link.getAttribute(
+                                "href"
+                            );
+
+
+                        if (
+                            !targetId ||
+                            targetId === "#"
+                        ) {
+                            return;
+                        }
+
+
+                        const target =
+                            document.querySelector(
+                                targetId
+                            );
+
+
+                        if (!target) {
+                            return;
+                        }
+
+
+                        event.preventDefault();
+
+
+                        const headerHeight =
+                            header?.offsetHeight ||
+                            0;
+
+
+                        const targetTop =
+                            target.offsetTop -
+                            headerHeight;
+
+
+                        window.scrollTo(
+                            {
+                                top: targetTop,
+                                behavior:
+                                    "smooth"
+                            }
                         );
 
-                    if (
-                        !targetId ||
-                        targetId === "#"
-                    ) {
-                        return;
                     }
+                );
 
-                    const target =
-                        document.querySelector(
-                            targetId
-                        );
-
-                    if (!target) {
-                        return;
-                    }
-
-                    event.preventDefault();
-
-                    const headerHeight =
-                        header?.offsetHeight ||
-                        0;
-
-                    const targetTop =
-                        target.offsetTop -
-                        headerHeight +
-                        1;
-
-                    window.scrollTo({
-                        top: targetTop,
-                        behavior: "smooth"
-                    });
-
-                }
-            );
-
-        });
+            }
+        );
 
 
     /* =====================================================
-       HERO MOUSE GRID
+       HERO GRID / MOUSE
     ===================================================== */
 
     if (
@@ -339,31 +429,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
         hero.addEventListener(
             "mousemove",
-            (event) => {
+            event => {
 
                 const rect =
                     hero.getBoundingClientRect();
+
 
                 const x =
                     event.clientX -
                     rect.left;
 
+
                 const y =
                     event.clientY -
                     rect.top;
+
 
                 const percentX =
                     (x / rect.width) *
                     100;
 
+
                 const percentY =
                     (y / rect.height) *
                     100;
+
 
                 heroGrid.style.setProperty(
                     "--mouse-x",
                     `${percentX}%`
                 );
+
 
                 heroGrid.style.setProperty(
                     "--mouse-y",
@@ -408,29 +504,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
         hero.addEventListener(
             "mousemove",
-            (event) => {
+            event => {
 
                 const rect =
                     hero.getBoundingClientRect();
+
 
                 const x =
                     event.clientX -
                     rect.left;
 
+
                 const y =
                     event.clientY -
                     rect.top;
 
+
                 const moveX =
-                    ((x / rect.width) - .5)
-                    * 12;
+                    (
+                        x / rect.width -
+                        .5
+                    ) * 10;
+
 
                 const moveY =
-                    ((y / rect.height) - .5)
-                    * 8;
+                    (
+                        y / rect.height -
+                        .5
+                    ) * 7;
+
 
                 heroCar.style.transform =
-                    `translate3d(${moveX}px, ${moveY}px, 0)`;
+                    `
+                    translate3d(
+                        ${moveX}px,
+                        ${moveY}px,
+                        0
+                    )
+                    `;
 
             }
         );
@@ -458,64 +569,82 @@ document.addEventListener("DOMContentLoaded", () => {
             ".service-card"
         );
 
+
     if (
         window.matchMedia(
             "(pointer: fine)"
         ).matches
     ) {
 
-        serviceCards.forEach((card) => {
-
-            card.addEventListener(
-                "mousemove",
-                (event) => {
-
-                    const rect =
-                        card.getBoundingClientRect();
-
-                    const x =
-                        event.clientX -
-                        rect.left;
-
-                    const y =
-                        event.clientY -
-                        rect.top;
-
-                    const rotateX =
-                        ((y / rect.height) - .5)
-                        * -5;
-
-                    const rotateY =
-                        ((x / rect.width) - .5)
-                        * 5;
-
-                    card.style.transform =
-                        `perspective(900px)
-                         rotateX(${rotateX}deg)
-                         rotateY(${rotateY}deg)
-                         translateY(-9px)`;
-
-                }
-            );
+        serviceCards.forEach(
+            card => {
 
 
-            card.addEventListener(
-                "mouseleave",
-                () => {
+                card.addEventListener(
+                    "mousemove",
+                    event => {
 
-                    card.style.transform =
-                        "";
+                        const rect =
+                            card.getBoundingClientRect();
 
-                }
-            );
 
-        });
+                        const x =
+                            event.clientX -
+                            rect.left;
+
+
+                        const y =
+                            event.clientY -
+                            rect.top;
+
+
+                        const rotateX =
+                            (
+                                y /
+                                rect.height -
+                                .5
+                            ) * -5;
+
+
+                        const rotateY =
+                            (
+                                x /
+                                rect.width -
+                                .5
+                            ) * 5;
+
+
+                        card.style.transform =
+                            `
+                            perspective(900px)
+                            rotateX(${rotateX}deg)
+                            rotateY(${rotateY}deg)
+                            translateY(-8px)
+                            `;
+
+                    }
+                );
+
+
+                card.addEventListener(
+                    "mouseleave",
+                    () => {
+
+                        card.style.transform =
+                            "";
+
+                    }
+                );
+
+
+            }
+        );
 
     }
 
 
     /* =====================================================
-       CHART ANIMATION
+       CHART
     ===================================================== */
 
     const chart =
@@ -523,39 +652,53 @@ document.addEventListener("DOMContentLoaded", () => {
             ".dashboard-chart"
         );
 
+
     if (chart) {
 
         const chartObserver =
             new IntersectionObserver(
-                (entries, observer) => {
+                (
+                    entries,
+                    observer
+                ) => {
 
-                    entries.forEach((entry) => {
+                    entries.forEach(
+                        entry => {
 
-                        if (
-                            !entry.isIntersecting
-                        ) {
-                            return;
-                        }
+                            if (
+                                !entry.isIntersecting
+                            ) {
+                                return;
+                            }
 
-                        chartColumns.forEach(
-                            (column, index) => {
 
-                                setTimeout(() => {
+                            chartColumns.forEach(
+                                (
+                                    column,
+                                    index
+                                ) => {
 
-                                    column.classList.add(
-                                        "active"
+                                    setTimeout(
+                                        () => {
+
+                                            column.classList.add(
+                                                "active"
+                                            );
+
+                                        },
+                                        index * 90
                                     );
 
-                                }, index * 90);
+                                }
+                            );
 
-                            }
-                        );
 
-                        observer.unobserve(
-                            chart
-                        );
+                            observer.unobserve(
+                                chart
+                            );
 
-                    });
+                        }
+                    );
 
                 },
                 {
@@ -572,19 +715,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       CURRENT YEAR
+       ANO
     ===================================================== */
 
-    if (yearElement) {
+    if (currentYear) {
 
-        yearElement.textContent =
-            new Date().getFullYear();
+        currentYear.textContent =
+            new Date()
+                .getFullYear();
 
     }
 
 
     /* =====================================================
-       BUTTON RIPPLE
+       RIPPLE
     ===================================================== */
 
     const buttons =
@@ -592,84 +736,115 @@ document.addEventListener("DOMContentLoaded", () => {
             ".button, .cta-button, .header-cta"
         );
 
-    buttons.forEach((button) => {
 
-        button.addEventListener(
-            "click",
-            function(event) {
+    buttons.forEach(
+        button => {
 
-                const ripple =
-                    document.createElement(
-                        "span"
-                    );
+            button.addEventListener(
+                "click",
+                function (event) {
 
-                const rect =
-                    button.getBoundingClientRect();
+                    const ripple =
+                        document.createElement(
+                            "span"
+                        );
 
-                const size =
-                    Math.max(
-                        rect.width,
-                        rect.height
-                    );
 
-                ripple.style.position =
-                    "absolute";
+                    const rect =
+                        button.getBoundingClientRect();
 
-                ripple.style.width =
-                    `${size}px`;
 
-                ripple.style.height =
-                    `${size}px`;
+                    const size =
+                        Math.max(
+                            rect.width,
+                            rect.height
+                        );
 
-                ripple.style.left =
-                    `${event.clientX - rect.left - size / 2}px`;
 
-                ripple.style.top =
-                    `${event.clientY - rect.top - size / 2}px`;
+                    ripple.style.position =
+                        "absolute";
 
-                ripple.style.borderRadius =
-                    "50%";
 
-                ripple.style.background =
-                    "rgba(255,255,255,.22)";
+                    ripple.style.width =
+                        `${size}px`;
 
-                ripple.style.pointerEvents =
-                    "none";
 
-                ripple.style.transform =
-                    "scale(0)";
+                    ripple.style.height =
+                        `${size}px`;
 
-                ripple.style.animation =
-                    "mobexRipple .65s ease-out forwards";
 
-                if (
-                    getComputedStyle(button)
-                        .position ===
-                    "static"
-                ) {
+                    ripple.style.left =
+                        `
+                        ${
+                            event.clientX -
+                            rect.left -
+                            size / 2
+                        }px
+                        `;
+
+
+                    ripple.style.top =
+                        `
+                        ${
+                            event.clientY -
+                            rect.top -
+                            size / 2
+                        }px
+                        `;
+
+
+                    ripple.style.borderRadius =
+                        "50%";
+
+
+                    ripple.style.background =
+                        "rgba(255,255,255,.20)";
+
+
+                    ripple.style.pointerEvents =
+                        "none";
+
+
+                    ripple.style.transform =
+                        "scale(0)";
+
+
+                    ripple.style.animation =
+                        `
+                        mobexRipple
+                        .65s
+                        ease-out
+                        forwards
+                        `;
+
 
                     button.style.position =
                         "relative";
 
+
+                    button.style.overflow =
+                        "hidden";
+
+
+                    button.appendChild(
+                        ripple
+                    );
+
+
+                    setTimeout(
+                        () => {
+
+                            ripple.remove();
+
+                        },
+                        700
+                    );
+
                 }
+            );
 
-                button.style.overflow =
-                    "hidden";
-
-                button.appendChild(
-                    ripple
-                );
-
-                setTimeout(() => {
-
-                    ripple.remove();
-
-                }, 700);
-
-            }
-        );
-
-    });
+        }
+    );
 
 
     /* =====================================================
@@ -681,8 +856,11 @@ document.addEventListener("DOMContentLoaded", () => {
             "style"
         );
 
+
     rippleStyle.textContent = `
+
         @keyframes mobexRipple {
+
             0% {
                 transform: scale(0);
                 opacity: .8;
@@ -692,12 +870,96 @@ document.addEventListener("DOMContentLoaded", () => {
                 transform: scale(2);
                 opacity: 0;
             }
+
         }
+
     `;
+
 
     document.head.appendChild(
         rippleStyle
     );
+
+
+    /* =====================================================
+       VÍDEO
+    ===================================================== */
+
+    const video =
+        document.querySelector(
+            ".mobex-video"
+        );
+
+
+    if (video) {
+
+        /*
+         * Garante o autoplay em navegadores
+         * que exigem muted.
+         */
+
+        video.muted = true;
+
+
+        /*
+         * Tenta iniciar automaticamente.
+         */
+
+        const tryPlayVideo =
+            () => {
+
+                video.play()
+                    .catch(
+                        () => {
+                            // O navegador pode bloquear autoplay.
+                        }
+                    );
+
+            };
+
+
+        tryPlayVideo();
+
+
+        /*
+         * Pausa enquanto estiver fora da tela
+         * e toca novamente quando voltar.
+         */
+
+        const videoObserver =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(
+                        entry => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                tryPlayVideo();
+
+                            } else {
+
+                                video.pause();
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: .25
+                }
+            );
+
+
+        videoObserver.observe(
+            video
+        );
+
+    }
 
 
     /* =====================================================
@@ -719,26 +981,35 @@ document.addEventListener("DOMContentLoaded", () => {
                     "active"
                 );
 
+
                 menuToggle?.setAttribute(
                     "aria-expanded",
                     "false"
                 );
 
+
                 document.body.classList.remove(
                     "no-scroll"
                 );
+
 
                 const bars =
                     menuToggle?.querySelectorAll(
                         "span"
                     );
 
-                bars?.forEach((bar) => {
 
-                    bar.style.transform = "";
-                    bar.style.opacity = "";
+                bars?.forEach(
+                    bar => {
 
-                });
+                        bar.style.transform =
+                            "";
+
+                        bar.style.opacity =
+                            "";
+
+                    }
+                );
 
             }
 
@@ -755,17 +1026,22 @@ document.addEventListener("DOMContentLoaded", () => {
             "(prefers-reduced-motion: reduce)"
         );
 
+
     if (reducedMotion.matches) {
 
         document
-            .querySelectorAll(".reveal")
-            .forEach((element) => {
+            .querySelectorAll(
+                ".reveal"
+            )
+            .forEach(
+                element => {
 
-                element.classList.add(
-                    "visible"
-                );
+                    element.classList.add(
+                        "visible"
+                    );
 
-            });
+                }
+            );
 
     }
 

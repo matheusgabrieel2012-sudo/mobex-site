@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
 
@@ -20,7 +21,9 @@
 
     <title>MobEx — Executive Mobility</title>
 
-    <!-- FONTS -->
+
+    <!-- GOOGLE FONTS -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -29,20 +32,37 @@
         rel="stylesheet"
     >
 
-    <!-- ICONS -->
+
+    <!-- FONT AWESOME -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
+
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- PRELOADER -->
-    <div class="preloader" id="preloader">
+
+    <!-- =========================================
+         PRELOADER
+    ========================================== -->
+
+    <div
+        class="preloader"
+        id="preloader"
+    >
+
         <div class="preloader-inner">
 
             <div class="preloader-brand">
@@ -53,18 +73,34 @@
                 <span></span>
             </div>
 
-            <p>EXECUTIVE MOBILITY</p>
+            <p>
+                EXECUTIVE MOBILITY
+            </p>
 
         </div>
+
     </div>
 
 
-    <!-- HEADER -->
-    <header class="header" id="header">
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header
+        class="header"
+        id="header"
+    >
 
         <div class="container header-inner">
 
-            <a href="#inicio" class="brand">
+
+            <!-- LOGO -->
+
+            <a
+                href="#inicio"
+                class="brand"
+            >
 
                 <div class="brand-name">
                     MOB<span>EX</span>
@@ -77,42 +113,77 @@
             </a>
 
 
+
+            <!-- DESKTOP MENU -->
+
             <nav class="desktop-nav">
 
-                <a class="nav-link active" href="#inicio">
+                <a
+                    href="#inicio"
+                    class="nav-link active"
+                >
                     Início
                 </a>
 
-                <a class="nav-link" href="#servicos">
+                <a
+                    href="#servicos"
+                    class="nav-link"
+                >
                     Serviços
                 </a>
 
-                <a class="nav-link" href="#experiencia">
+                <a
+                    href="#experiencia"
+                    class="nav-link"
+                >
                     Experiência
                 </a>
 
-                <a class="nav-link" href="#sobre">
+                <a
+                    href="#video"
+                    class="nav-link"
+                >
+                    Vídeo
+                </a>
+
+                <a
+                    href="#sobre"
+                    class="nav-link"
+                >
                     Sobre
                 </a>
 
-                <a class="nav-link" href="#contato">
+                <a
+                    href="#contato"
+                    class="nav-link"
+                >
                     Contato
                 </a>
 
             </nav>
 
 
-            <!-- WHATSAPP CORRETO -->
+
+            <!-- HEADER BUTTON -->
+
             <a
-                href="https://wa.me/5561998672030?text=Olá%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
+                href="https://wa.me/5561998672030?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
                 target="_blank"
                 rel="noopener noreferrer"
                 class="header-cta"
             >
-                <span>Solicitar transporte</span>
+
+                <span>
+                    Solicitar transporte
+                </span>
+
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
             </a>
 
+
+
+            <!-- MOBILE BUTTON -->
 
             <button
                 class="menu-toggle"
@@ -121,31 +192,59 @@
                 aria-label="Abrir menu"
                 aria-expanded="false"
             >
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </button>
 
         </div>
 
 
-        <!-- MOBILE MENU -->
-        <div class="mobile-menu" id="mobileMenu">
 
-            <a href="#inicio">Início</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#experiencia">Experiência</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
+        <!-- MOBILE MENU -->
+
+        <div
+            class="mobile-menu"
+            id="mobileMenu"
+        >
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#servicos">
+                Serviços
+            </a>
+
+            <a href="#experiencia">
+                Experiência
+            </a>
+
+            <a href="#video">
+                Vídeo
+            </a>
+
+            <a href="#sobre">
+                Sobre
+            </a>
+
+            <a href="#contato">
+                Contato
+            </a>
 
             <a
-                href="https://wa.me/5561998672030?text=Olá%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
+                href="https://wa.me/5561998672030?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
                 target="_blank"
                 rel="noopener noreferrer"
                 class="mobile-whatsapp"
             >
+
                 <i class="fa-brands fa-whatsapp"></i>
+
                 Solicitar transporte
+
             </a>
 
         </div>
@@ -153,81 +252,126 @@
     </header>
 
 
+
     <main>
 
-        <!-- HERO -->
-        <section class="hero" id="inicio">
+
+
+        <!-- =========================================
+             HERO
+        ========================================== -->
+
+        <section
+            class="hero"
+            id="inicio"
+        >
 
             <div class="hero-grid"></div>
+
             <div class="hero-light"></div>
+
             <div class="hero-noise"></div>
 
             <div class="hero-orb hero-orb-1"></div>
+
             <div class="hero-orb hero-orb-2"></div>
+
 
 
             <div class="hero-topline">
 
-                <span>BRASÍLIA / DF</span>
+                <span>
+                    BRASÍLIA / DF
+                </span>
 
                 <span class="topline-separator"></span>
 
-                <span>EXECUTIVE MOBILITY</span>
+                <span>
+                    EXECUTIVE MOBILITY
+                </span>
 
             </div>
 
 
+
             <div class="container hero-container">
 
-                <!-- HERO COPY -->
+
+                <!-- HERO TEXTO -->
+
                 <div class="hero-copy reveal">
 
                     <div class="hero-kicker">
+
                         <span></span>
+
                         MOBEX EXECUTIVE MOBILITY
+
                     </div>
 
 
+
                     <h1>
+
                         Mais do que
                         <em>chegar.</em>
+
                         <br>
+
                         É sobre como
                         <strong>você chega.</strong>
+
                     </h1>
 
 
+
                     <p class="hero-description">
-                        Transporte executivo para quem não abre mão de
-                        conforto, segurança, pontualidade e discrição.
+
+                        Transporte executivo para quem não abre mão
+                        de conforto, segurança, pontualidade e discrição.
+
                     </p>
+
 
 
                     <div class="hero-actions">
 
                         <a
-                            class="button button-gold"
-                            href="https://wa.me/5561998672030?text=Olá%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
+                            href="https://wa.me/5561998672030?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
                             target="_blank"
                             rel="noopener noreferrer"
+                            class="button button-gold"
                         >
-                            <span>Solicitar transporte</span>
+
+                            <span>
+                                Solicitar transporte
+                            </span>
+
                             <i class="fa-solid fa-arrow-right"></i>
+
                         </a>
 
 
+
                         <a
-                            class="button button-dark"
                             href="#servicos"
+                            class="button button-dark"
                         >
-                            <span>Conhecer serviços</span>
+
+                            <span>
+                                Conhecer serviços
+                            </span>
+
                             <i class="fa-solid fa-arrow-down"></i>
+
                         </a>
 
                     </div>
 
 
+
                     <div class="hero-proof">
+
 
                         <div class="proof-item">
 
@@ -273,27 +417,35 @@
 
                         </div>
 
+
                     </div>
 
                 </div>
 
 
-                <!-- VEHICLE -->
+
+                <!-- VEÍCULO -->
+
                 <div class="hero-car reveal">
 
                     <div class="vehicle-aura"></div>
 
                     <div class="vehicle-ring vehicle-ring-main"></div>
+
                     <div class="vehicle-ring vehicle-ring-small"></div>
 
 
+
                     <div class="vehicle-grid-label vehicle-label-top">
+
                         <span></span>
+
                         MOBEX / MBX-001
+
                     </div>
 
 
-                    <!-- CAMINHO CORRETO -->
+
                     <img
                         src="assets/carro.png"
                         alt="Veículo executivo MobEx"
@@ -301,23 +453,42 @@
                     >
 
 
+
                     <div class="vehicle-spec">
 
                         <div>
-                            <small>CLASS</small>
-                            <strong>EXECUTIVE</strong>
+
+                            <small>
+                                CLASS
+                            </small>
+
+                            <strong>
+                                EXECUTIVE
+                            </strong>
+
                         </div>
 
+
                         <div>
-                            <small>BASE</small>
-                            <strong>BRASÍLIA</strong>
+
+                            <small>
+                                BASE
+                            </small>
+
+                            <strong>
+                                BRASÍLIA
+                            </strong>
+
                         </div>
 
                     </div>
 
 
+
                     <div class="vehicle-cross cross-a"></div>
+
                     <div class="vehicle-cross cross-b"></div>
+
                     <div class="vehicle-cross cross-c"></div>
 
                 </div>
@@ -325,29 +496,57 @@
             </div>
 
 
+
+            <!-- HERO FOOTER -->
+
             <div class="hero-footer">
 
                 <div class="container hero-footer-inner">
 
+
                     <div class="hero-footer-item">
+
                         <i class="fa-solid fa-shield-halved"></i>
-                        <span>Segurança</span>
+
+                        <span>
+                            Segurança
+                        </span>
+
                     </div>
 
+
                     <div class="hero-footer-item">
+
                         <i class="fa-regular fa-clock"></i>
-                        <span>Pontualidade</span>
+
+                        <span>
+                            Pontualidade
+                        </span>
+
                     </div>
 
+
                     <div class="hero-footer-item">
+
                         <i class="fa-solid fa-gem"></i>
-                        <span>Conforto</span>
+
+                        <span>
+                            Conforto
+                        </span>
+
                     </div>
 
+
                     <div class="hero-footer-item">
+
                         <i class="fa-solid fa-user-secret"></i>
-                        <span>Discrição</span>
+
+                        <span>
+                            Discrição
+                        </span>
+
                     </div>
+
 
                 </div>
 
@@ -356,7 +555,11 @@
         </section>
 
 
-        <!-- TICKER -->
+
+        <!-- =========================================
+             TICKER
+        ========================================== -->
+
         <section class="ticker">
 
             <div class="ticker-track">
@@ -390,46 +593,71 @@
         </section>
 
 
-        <!-- SERVIÇOS -->
-        <section class="section services" id="servicos">
+
+        <!-- =========================================
+             SERVIÇOS
+        ========================================== -->
+
+        <section
+            class="section services"
+            id="servicos"
+        >
 
             <div class="container">
+
 
                 <div class="section-heading reveal">
 
                     <div>
 
                         <div class="section-tag">
+
                             <span></span>
+
                             NOSSOS SERVIÇOS
+
                         </div>
 
+
                         <h2>
+
                             Mobilidade feita
                             <em>para você.</em>
+
                         </h2>
 
                     </div>
 
 
                     <p>
+
                         Seja para um compromisso profissional ou
                         uma ocasião especial, a MobEx entrega uma
                         experiência consistente em cada trajeto.
+
                     </p>
 
                 </div>
 
 
+
                 <div class="services-grid">
 
-                    <!-- 01 -->
+
+                    <!-- SERVIÇO 01 -->
+
                     <article class="service-card reveal">
 
                         <div class="service-top">
-                            <span>01</span>
+
+                            <span>
+                                01
+                            </span>
+
                             <i class="fa-solid fa-plane-departure"></i>
+
                         </div>
+
 
                         <div class="service-content">
 
@@ -444,26 +672,38 @@
 
                         </div>
 
+
                         <a
-                            href="https://wa.me/5561998672030?text=Olá%2C%20gostaria%20de%20solicitar%20um%20transporte%20para%20o%20aeroporto."
+                            href="https://wa.me/5561998672030?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20transporte%20para%20o%20aeroporto."
                             target="_blank"
                             rel="noopener noreferrer"
                             class="service-link"
                         >
+
                             Solicitar
+
                             <i class="fa-solid fa-arrow-right"></i>
+
                         </a>
 
                     </article>
 
 
-                    <!-- 02 -->
+
+                    <!-- SERVIÇO 02 -->
+
                     <article class="service-card reveal">
 
                         <div class="service-top">
-                            <span>02</span>
+
+                            <span>
+                                02
+                            </span>
+
                             <i class="fa-solid fa-briefcase"></i>
+
                         </div>
+
 
                         <div class="service-content">
 
@@ -478,26 +718,38 @@
 
                         </div>
 
+
                         <a
-                            href="https://wa.me/5561998672030?text=Olá%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
+                            href="https://wa.me/5561998672030?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
                             target="_blank"
                             rel="noopener noreferrer"
                             class="service-link"
                         >
+
                             Solicitar
+
                             <i class="fa-solid fa-arrow-right"></i>
+
                         </a>
 
                     </article>
 
 
-                    <!-- 03 -->
+
+                    <!-- SERVIÇO 03 -->
+
                     <article class="service-card reveal">
 
                         <div class="service-top">
-                            <span>03</span>
+
+                            <span>
+                                03
+                            </span>
+
                             <i class="fa-solid fa-champagne-glasses"></i>
+
                         </div>
+
 
                         <div class="service-content">
 
@@ -512,26 +764,38 @@
 
                         </div>
 
+
                         <a
-                            href="https://wa.me/5561998672030?text=Olá%2C%20gostaria%20de%20solicitar%20um%20transporte%20para%20um%20evento."
+                            href="https://wa.me/5561998672030?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20transporte%20para%20um%20evento."
                             target="_blank"
                             rel="noopener noreferrer"
                             class="service-link"
                         >
+
                             Solicitar
+
                             <i class="fa-solid fa-arrow-right"></i>
+
                         </a>
 
                     </article>
 
 
-                    <!-- 04 -->
+
+                    <!-- SERVIÇO 04 -->
+
                     <article class="service-card reveal">
 
                         <div class="service-top">
-                            <span>04</span>
+
+                            <span>
+                                04
+                            </span>
+
                             <i class="fa-solid fa-road"></i>
+
                         </div>
+
 
                         <div class="service-content">
 
@@ -546,17 +810,22 @@
 
                         </div>
 
+
                         <a
-                            href="https://wa.me/5561998672030?text=Olá%2C%20gostaria%20de%20solicitar%20uma%20viagem."
+                            href="https://wa.me/5561998672030?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20viagem."
                             target="_blank"
                             rel="noopener noreferrer"
                             class="service-link"
                         >
+
                             Solicitar
+
                             <i class="fa-solid fa-arrow-right"></i>
+
                         </a>
 
                     </article>
+
 
                 </div>
 
@@ -565,83 +834,127 @@
         </section>
 
 
-        <!-- EXPERIENCE -->
-        <section class="section experience" id="experiencia">
+
+        <!-- =========================================
+             EXPERIÊNCIA
+        ========================================== -->
+
+        <section
+            class="section experience"
+            id="experiencia"
+        >
 
             <div class="container experience-layout">
+
 
                 <div class="experience-copy reveal">
 
                     <div class="section-tag">
+
                         <span></span>
+
                         A EXPERIÊNCIA MOBEX
+
                     </div>
 
+
                     <h2>
+
                         O luxo não está
                         <em>no excesso.</em>
+
                     </h2>
 
+
                     <p>
+
                         Está naquilo que você percebe sem precisar
                         pensar: o carro preparado, o horário respeitado,
                         o atendimento discreto e a viagem acontecendo
                         exatamente como deveria.
+
                     </p>
+
 
 
                     <div class="experience-points">
 
+
                         <div class="experience-point">
 
                             <div class="point-icon">
+
                                 <i class="fa-solid fa-check"></i>
+
                             </div>
 
                             <div>
-                                <strong>Tempo respeitado</strong>
+
+                                <strong>
+                                    Tempo respeitado
+                                </strong>
+
                                 <span>
                                     Pontualidade em cada deslocamento.
                                 </span>
+
                             </div>
 
                         </div>
 
 
+
                         <div class="experience-point">
 
                             <div class="point-icon">
+
                                 <i class="fa-solid fa-check"></i>
+
                             </div>
 
                             <div>
-                                <strong>Atendimento pessoal</strong>
+
+                                <strong>
+                                    Atendimento pessoal
+                                </strong>
+
                                 <span>
                                     Uma experiência pensada para cada cliente.
                                 </span>
+
                             </div>
 
                         </div>
+
 
 
                         <div class="experience-point">
 
                             <div class="point-icon">
+
                                 <i class="fa-solid fa-check"></i>
+
                             </div>
 
                             <div>
-                                <strong>Discrição</strong>
+
+                                <strong>
+                                    Discrição
+                                </strong>
+
                                 <span>
                                     Privacidade durante todo o trajeto.
                                 </span>
+
                             </div>
 
                         </div>
+
 
                     </div>
 
                 </div>
+
 
 
                 <div class="experience-panel reveal">
@@ -667,21 +980,31 @@
 
                     <div class="panel-center">
 
+
                         <div class="panel-circle">
 
                             <div class="panel-circle-inner">
+
                                 <i class="fa-solid fa-location-dot"></i>
+
                             </div>
 
                         </div>
 
 
+
                         <div class="route">
+
 
                             <div class="route-row">
 
-                                <small>ORIGEM</small>
-                                <strong>BRASÍLIA</strong>
+                                <small>
+                                    ORIGEM
+                                </small>
+
+                                <strong>
+                                    BRASÍLIA
+                                </strong>
 
                             </div>
 
@@ -693,10 +1016,16 @@
 
                             <div class="route-row">
 
-                                <small>DESTINO</small>
-                                <strong>CONSULTE</strong>
+                                <small>
+                                    DESTINO
+                                </small>
+
+                                <strong>
+                                    CONSULTE
+                                </strong>
 
                             </div>
+
 
                         </div>
 
@@ -706,17 +1035,32 @@
                     <div class="panel-data">
 
                         <div>
-                            <small>STATUS</small>
+
+                            <small>
+                                STATUS
+                            </small>
 
                             <strong>
+
                                 <span class="live-dot"></span>
+
                                 DISPONÍVEL
+
                             </strong>
+
                         </div>
 
+
                         <div>
-                            <small>SERVICE</small>
-                            <strong>EXECUTIVE</strong>
+
+                            <small>
+                                SERVICE
+                            </small>
+
+                            <strong>
+                                EXECUTIVE
+                            </strong>
+
                         </div>
 
                     </div>
@@ -728,42 +1072,218 @@
         </section>
 
 
-        <!-- SOBRE -->
-        <section class="section about" id="sobre">
+
+        <!-- =========================================
+             VÍDEO
+        ========================================== -->
+
+        <section
+            class="video-section"
+            id="video"
+        >
+
+            <div class="video-background"></div>
+
+            <div class="video-light"></div>
+
 
             <div class="container">
 
-                <div class="about-header reveal">
 
-                    <div>
+                <div class="video-heading reveal">
 
-                        <div class="section-tag">
-                            <span></span>
-                            SOBRE A MOBEX
-                        </div>
 
-                        <h2>
-                            Não é apenas
-                            <em>transporte.</em>
-                        </h2>
+                    <div class="section-tag">
+
+                        <span></span>
+
+                        EXPERIÊNCIA MOBEX
 
                     </div>
 
+
+                    <h2>
+
+                        Veja a MobEx
+                        <em>em movimento.</em>
+
+                    </h2>
+
+
                     <p>
-                        É a maneira como você escolhe
-                        atravessar a cidade.
+
+                        Uma experiência executiva começa antes mesmo
+                        de você entrar no veículo.
+
                     </p>
 
                 </div>
 
 
+
+                <div class="video-wrapper reveal">
+
+
+                    <video
+                        class="mobex-video"
+                        controls
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    >
+
+                        <source
+                            src="assets/video.mp4"
+                            type="video/mp4"
+                        >
+
+                        Seu navegador não suporta a reprodução de vídeos.
+
+                    </video>
+
+
+
+                    <div class="video-overlay">
+
+
+                        <div
+                            class="video-corner top-left"
+                        ></div>
+
+                        <div
+                            class="video-corner top-right"
+                        ></div>
+
+                        <div
+                            class="video-corner bottom-left"
+                        ></div>
+
+                        <div
+                            class="video-corner bottom-right"
+                        ></div>
+
+
+                        <span class="video-label">
+
+                            MOBEX / EXECUTIVE MOBILITY
+
+                        </span>
+
+
+                        <div class="video-center-marker">
+
+                            <span></span>
+
+                            <span></span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="video-bottom reveal">
+
+                    <div>
+
+                        <i class="fa-solid fa-play"></i>
+
+                        <span>
+                            EXPERIÊNCIA VISUAL
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            MOBEX / 001
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            BRASÍLIA / DF
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             SOBRE
+        ========================================== -->
+
+        <section
+            class="section about"
+            id="sobre"
+        >
+
+            <div class="container">
+
+
+                <div class="about-header reveal">
+
+
+                    <div>
+
+                        <div class="section-tag">
+
+                            <span></span>
+
+                            SOBRE A MOBEX
+
+                        </div>
+
+
+                        <h2>
+
+                            Não é apenas
+                            <em>transporte.</em>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        É a maneira como você escolhe
+                        atravessar a cidade.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- DASHBOARD -->
+
                 <div class="about-dashboard reveal">
+
 
                     <div class="dashboard-top">
 
+
                         <div class="dashboard-brand">
 
-                            <span>MOBEX</span>
+                            <span>
+                                MOBEX
+                            </span>
 
                             <small>
                                 EXECUTIVE MOBILITY SYSTEM
@@ -783,11 +1303,14 @@
                     </div>
 
 
+
                     <div class="dashboard-body">
 
 
                         <!-- STATUS -->
+
                         <div class="dashboard-status">
+
 
                             <div class="dashboard-heading">
 
@@ -833,11 +1356,15 @@
 
                             </div>
 
+
                         </div>
 
 
+
                         <!-- GRÁFICO -->
+
                         <div class="dashboard-chart">
+
 
                             <div class="dashboard-heading">
 
@@ -854,15 +1381,20 @@
 
                             <div class="chart">
 
+
                                 <div class="chart-grid">
+
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                     <span></span>
+
                                 </div>
 
 
+
                                 <div class="chart-columns">
+
 
                                     <div class="chart-column">
                                         <span style="--height:44%;"></span>
@@ -892,9 +1424,11 @@
                                         <span style="--height:94%;"></span>
                                     </div>
 
+
                                 </div>
 
                             </div>
+
 
 
                             <div class="chart-labels">
@@ -909,11 +1443,15 @@
 
                             </div>
 
+
                         </div>
 
 
-                        <!-- ESTATÍSTICAS -->
+
+                        <!-- STATS -->
+
                         <div class="dashboard-stats">
+
 
                             <div class="dashboard-stat">
 
@@ -930,6 +1468,7 @@
                                 </span>
 
                             </div>
+
 
 
                             <div class="dashboard-stat">
@@ -949,6 +1488,7 @@
                             </div>
 
 
+
                             <div class="dashboard-stat">
 
                                 <small>
@@ -965,6 +1505,7 @@
 
                             </div>
 
+
                         </div>
 
                     </div>
@@ -976,16 +1517,26 @@
         </section>
 
 
-        <!-- CTA -->
-        <section class="cta-section" id="contato">
+
+        <!-- =========================================
+             CTA
+        ========================================== -->
+
+        <section
+            class="cta-section"
+            id="contato"
+        >
 
             <div class="cta-grid"></div>
+
             <div class="cta-glow"></div>
 
 
             <div class="container">
 
+
                 <div class="cta-content reveal">
+
 
                     <div class="section-tag">
 
@@ -997,19 +1548,23 @@
 
 
                     <h2>
+
                         Seu próximo destino
                         começa <em>aqui.</em>
+
                     </h2>
 
 
                     <p>
+
                         Solicite seu transporte executivo
                         diretamente pelo WhatsApp.
+
                     </p>
 
 
                     <a
-                        href="https://wa.me/5561998672030?text=Olá%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
+                        href="https://wa.me/5561998672030?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
                         target="_blank"
                         rel="noopener noreferrer"
                         class="cta-button"
@@ -1017,7 +1572,9 @@
 
                         <i class="fa-brands fa-whatsapp"></i>
 
-                        <span>Falar com a MobEx</span>
+                        <span>
+                            Falar com a MobEx
+                        </span>
 
                         <i class="fa-solid fa-arrow-right"></i>
 
@@ -1032,17 +1589,26 @@
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
     <footer class="footer">
 
         <div class="container">
+
 
             <div class="footer-main">
 
 
                 <div class="footer-brand">
 
-                    <a href="#inicio" class="brand">
+
+                    <a
+                        href="#inicio"
+                        class="brand"
+                    >
 
                         <div class="brand-name">
                             MOB<span>EX</span>
@@ -1056,17 +1622,22 @@
 
 
                     <p>
+
                         Mais do que chegar.
                         <br>
                         É sobre como você chega.
+
                     </p>
 
                 </div>
 
 
+
                 <div class="footer-column">
 
-                    <h4>NAVEGAÇÃO</h4>
+                    <h4>
+                        NAVEGAÇÃO
+                    </h4>
 
                     <a href="#inicio">
                         Início
@@ -1080,6 +1651,10 @@
                         Experiência
                     </a>
 
+                    <a href="#video">
+                        Vídeo
+                    </a>
+
                     <a href="#sobre">
                         Sobre
                     </a>
@@ -1087,9 +1662,12 @@
                 </div>
 
 
+
                 <div class="footer-column">
 
-                    <h4>SERVIÇOS</h4>
+                    <h4>
+                        SERVIÇOS
+                    </h4>
 
                     <a href="#servicos">
                         Aeroporto
@@ -1110,9 +1688,13 @@
                 </div>
 
 
+
                 <div class="footer-column">
 
-                    <h4>CONTATO</h4>
+                    <h4>
+                        CONTATO
+                    </h4>
+
 
                     <a
                         href="https://wa.me/5561998672030"
@@ -1122,13 +1704,16 @@
                         WhatsApp
                     </a>
 
+
                     <span>
                         (61) 99867-2030
                     </span>
 
+
                     <span>
                         Brasília — DF
                     </span>
+
 
                     <span>
                         Atendimento sob consulta
@@ -1136,19 +1721,27 @@
 
                 </div>
 
+
             </div>
+
 
 
             <div class="footer-bottom">
 
+
                 <span>
-                    © <span id="currentYear"></span> MobEx.
+
+                    © <span id="currentYear"></span>
+                    MobEx.
                     Todos os direitos reservados.
+
                 </span>
+
 
                 <span>
                     EXECUTIVE MOBILITY / BRASÍLIA
                 </span>
+
 
             </div>
 
@@ -1157,10 +1750,14 @@
     </footer>
 
 
-    <!-- FLOATING WHATSAPP -->
+
+    <!-- =========================================
+         FLOATING WHATSAPP
+    ========================================== -->
+
     <a
         class="floating-whatsapp"
-        href="https://wa.me/5561998672030?text=Olá%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
+        href="https://wa.me/5561998672030?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp MobEx"
@@ -1173,7 +1770,9 @@
     </a>
 
 
-    <!-- JS -->
+
+    <!-- JAVASCRIPT -->
+
     <script src="script.js"></script>
 
 </body>
